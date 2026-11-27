@@ -33,7 +33,7 @@
     btn.appendChild(clip); btn.appendChild(tag);
     btn.addEventListener("mouseenter", function () { setLevel(+lv); });
     btn.addEventListener("focus", function () { setLevel(+lv); });
-    btn.addEventListener("click", function () { setLevel(+lv); enter(+lv); });
+    btn.addEventListener("click", function () { if (typeof stopDemo === "function") stopDemo(); setLevel(+lv); enter(+lv); });
     floorsEl.appendChild(btn);
   });
 
@@ -51,6 +51,17 @@
     var on = hero.classList.toggle("night"); e.currentTarget.setAttribute("aria-pressed", on); e.currentTarget.textContent = on ? "Day view" : "Night view";
   });
   setLevel(4);
+
+  /* touch screens have no hover: walk the light up the floors until the visitor touches one */
+  var touch = window.matchMedia && window.matchMedia("(hover: none), (max-width: 900px)").matches, demo = null;
+  function stopDemo() { if (demo) { clearInterval(demo); demo = null; } hero.classList.add("touched"); }
+  if (touch && !reduce) {
+    var seq = [2, 3, 4, 5, 6, 7, 6, 5, 4, 3], si = 0;
+    demo = setInterval(function () { setLevel(seq[si++ % seq.length]); }, 1100);
+    ["touchstart", "pointerdown", "wheel"].forEach(function (ev) { hero.addEventListener(ev, stopDemo, { once: true, passive: true }); });
+    $("lvlSlider").addEventListener("input", stopDemo);
+    setTimeout(function () { if (demo) { clearInterval(demo); demo = null; setLevel(4); } }, 16000); // stop walking after a while; the hint stays until a touch
+  }
 
   /* ---------- inside: the 360 rooms ---------- */
   var viewer = null, curType = null, curRoom = null, lastFocus = null;
