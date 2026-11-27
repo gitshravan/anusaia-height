@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Anusaia Height · 1 BHK homes in Karanjade, Panvel</title>
+<meta name="description" content="Anusaia Height by Drream Vastu Developers: a single tower of 1 BHK homes at Plot 102, Sector R5, Karanjade, Panvel. Choose your floor and step inside every room in 360°.">
+<meta property="og:title" content="Anusaia Height · Karanjade, Panvel">
+<meta property="og:description" content="Choose your floor and step inside every room in 360°.">
+<meta property="og:image" content="assets/tower-share.jpg">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#16120b">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2316120b'/%3E%3Cpath d='M12 40 32 22l20 18' fill='none' stroke='%23F2B65A' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/vendor/pannellum.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top" id="top">
+  <a class="brand" href="#tower" aria-label="Anusaia Height, back to the tower">
+    <svg viewBox="0 0 64 30" aria-hidden="true"><path d="M4 26 32 6l28 20" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <span>Anusaia Height</span>
+  </a>
+  <nav class="nav" aria-label="Main">
+    <a href="#residences">Residences</a><a href="#overview">Overview</a><a href="#walkthrough">Walkthrough</a><a href="#location">Location</a><a href="#contact">Contact</a>
+  </nav>
+  <a class="btn btn-gold small" href="#contact">Register interest</a>
+</header>
+
+<main id="main">
+<!-- ============ THE TOWER: choose your floor ============ -->
+<section class="hero" id="tower" aria-label="Choose your floor">
+  <video class="sky" autoplay muted loop playsinline preload="auto" poster="assets/sky.jpg" aria-hidden="true"><source src="assets/sky.mp4" type="video/mp4"></video>
+  <div class="night-veil" aria-hidden="true"></div>
+  <div class="stage-wrap">
+    <div class="stage" id="stage">
+      <img class="tower" src="assets/tower_wide.webp" alt="Anusaia Height, a single tower of stilt plus seven floors, Karanjade, Panvel" width="3200" height="1665" fetchpriority="high">
+      <div class="lit-all" aria-hidden="true"></div>
+      <div class="floors" id="floors"></div>
+    </div>
+  </div>
+
+  <aside class="panel" aria-live="polite">
+    <p class="kicker">Anusaia Height · Karanjade, Panvel</p>
+    <h1>Choose<br>your floor</h1>
+    <p class="hint">Point at a floor and its rooms light up. Tap it, or slide to a level, and you go in through the glass.</p>
+    <div class="level"><span>Level</span><strong id="lvlNum">4</strong></div>
+    <p class="units" id="lvlUnits"></p>
+    <label class="slider-label" for="lvlSlider">Floor</label>
+    <input type="range" id="lvlSlider" min="1" max="7" step="1" value="4" aria-valuetext="Level 4">
+    <div class="panel-actions">
+      <button class="btn btn-gold" id="enterBtn" type="button">Step inside</button>
+      <button class="btn btn-ghost" id="nightBtn" type="button" aria-pressed="false">Night view</button>
+    </div>
+  </aside>
+  <div class="veil" id="veil" aria-hidden="true"></div>
+</section>
+
+<!-- ============ OVERVIEW ============ -->
+<section class="sec" id="overview">
+  <div class="wrap">
+    <p class="kicker">The building</p>
+    <h2>A single tower of<br>calm, bright homes</h2>
+    <div class="facts">
+      <div><strong>Stilt + 7</strong><span>floors</span></div>
+      <div><strong>1</strong><span>single tower</span></div>
+      <div><strong>1 BHK &amp; 1 RK</strong><span>homes</span></div>
+      <div class="price-fact" id="priceFact"><strong id="priceVal"></strong><span id="priceNote"></span></div>
+    </div>
+    <p class="lead">Plot 102 in Sector R5, Node Pushpak: a quiet residential sector of Karanjade, minutes from Panvel station, the old market and the new Navi Mumbai airport.</p>
+  </div>
+</section>
+
+<!-- ============ RESIDENCES ============ -->
+<section class="sec dark" id="residences">
+  <div class="wrap">
+    <p class="kicker">Residences</p>
+    <h2>Step inside every room</h2>
+    <p class="lead">Each home is shown in 360°. Drag to look around, pinch or scroll to zoom.</p>
+    <div class="cards" id="typeCards"></div>
+  </div>
+</section>
+
+<!-- ============ WALKTHROUGH ============ -->
+<section class="sec" id="walkthrough">
+  <div class="wrap narrow">
+    <p class="kicker">Walkthrough</p>
+    <h2>A day at Anusaia Height</h2>
+    <video class="film" controls playsinline preload="none" poster="assets/walkthrough-poster.jpg"><source src="assets/walkthrough.mp4" type="video/mp4">Your browser cannot play this video.</video>
+  </div>
+</section>
+
+<!-- ============ LOCATION ============ -->
+<section class="sec dark" id="location">
+  <div class="wrap two">
+    <div>
+      <p class="kicker">Location</p>
+      <h2>Everything is<br>minutes away</h2>
+      <p class="addr" id="siteAddr"></p>
+      <ul class="near" id="nearby"></ul>
+      <a class="btn btn-ghost light" id="dirBtn" target="_blank" rel="noopener">Get directions</a>
+    </div>
+    <a class="map" id="mapLink" target="_blank" rel="noopener" aria-label="Open Anusaia Height in Google Maps"><img src="assets/map.jpg" alt="Map of Sector R5, Karanjade, with Anusaia Height marked" width="900" height="900" loading="lazy"><span class="map-cta">Open in Google Maps</span><small>© OpenStreetMap contributors</small></a>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="sec" id="contact">
+  <div class="wrap two">
+    <div>
+      <p class="kicker">Contact</p>
+      <h2>Book a site visit</h2>
+      <dl class="contact-list">
+        <div><dt>Phone</dt><dd><a id="cPhone" class="c-link"></a></dd></div>
+        <div><dt>WhatsApp</dt><dd><a id="cWa" class="c-link" target="_blank" rel="noopener"></a></dd></div>
+        <div><dt>Email</dt><dd><a id="cEmail" class="c-link"></a></dd></div>
+        <div><dt>Sales office</dt><dd id="cOffice"></dd></div>
+        <div><dt>Hours</dt><dd id="cHours"></dd></div>
+      </dl>
+    </div>
+    <form class="form" id="enquiry" novalidate>
+      <h3>Register your interest</h3>
+      <label>Your name<input name="name" autocomplete="name" required></label>
+      <label>Phone number<input name="phone" type="tel" autocomplete="tel" inputmode="tel" required pattern="[0-9+\s-]{8,}"></label>
+      <label>Interested in<select name="interest" id="interestSel"></select></label>
+      <label>Message (optional)<textarea name="message" rows="3"></textarea></label>
+      <button class="btn btn-gold" type="submit">Send enquiry</button>
+      <p class="form-msg" id="formMsg" role="status"></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p><strong>Anusaia Height</strong> by <span id="devName"></span></p>
+    <p id="reraLine">MahaRERA registration no.: <span id="rera"></span></p>
+    <p class="fine">All images are artistic impressions; furniture and finishes are for illustration. Prices and availability may change without notice.</p>
+  </div>
+</footer>
+
+<div class="float" id="floatBtns" aria-label="Quick contact"></div>
+
+<!-- ============ INSIDE: 360 viewer ============ -->
+<div class="inside" id="inside" role="dialog" aria-modal="true" aria-labelledby="roomTitle" hidden>
+  <div class="inside-top">
+    <button class="link-btn" id="backBtn" type="button">← Back to the tower</button>
+    <div class="inside-title"><span id="insideType"></span><h2 id="roomTitle"></h2></div>
+    <a class="link-btn" href="#contact" id="insideReg">Register interest</a>
+  </div>
+  <div id="pano" class="pano"></div>
+  <div class="inside-bottom">
+    <div class="type-switch" id="typeSwitch" role="tablist" aria-label="Residence type"></div>
+    <div class="rooms" id="roomTabs" role="tablist" aria-label="Rooms"></div>
+  </div>
+</div>
+
+<script src="config.js"></script>
+<script src="assets/vendor/pannellum.js" defer></script>
+<script src="app.js" defer></script>
+</body>
+</html>
