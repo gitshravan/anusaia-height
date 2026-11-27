@@ -57,7 +57,7 @@
   function stopDemo() { if (demo) { clearInterval(demo); demo = null; } hero.classList.add("touched"); }
   if (touch && !reduce) {
     var seq = [2, 3, 4, 5, 6, 7, 6, 5, 4, 3], si = 0;
-    demo = setInterval(function () { setLevel(seq[si++ % seq.length]); }, 1100);
+    demo = setInterval(function () { setLevel(seq[si++ % seq.length]); }, 1700);
     ["touchstart", "pointerdown", "wheel"].forEach(function (ev) { hero.addEventListener(ev, stopDemo, { once: true, passive: true }); });
     $("lvlSlider").addEventListener("input", stopDemo);
     setTimeout(function () { if (demo) { clearInterval(demo); demo = null; setLevel(4); } }, 16000); // stop walking after a while; the hint stays until a touch
